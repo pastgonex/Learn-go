@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	s := "我爱你"
+	s := "世界首发, 就在这里!"
 	fmt.Println(len(s))
 	fmt.Printf("%x\n", []byte(s))
 	for _, b := range []byte(s) { // utf8编码 中文3字节
@@ -21,7 +21,23 @@ func main() {
 	fmt.Println()
 
 	fmt.Println("Rune count:", utf8.RuneCountInString(s))
-	bytes := []byte(s)
-	utf8.DecodeRune(bytes)
+
+
+
+
 	
+
+	// 将s转换为Slice
+	bytes := []byte(s)
+	for len(bytes) > 0 {
+		r, size := utf8.DecodeRune(bytes)
+		fmt.Printf("%c %v\n", r, size)
+		bytes = bytes[size:]
+	}
+
+	// 直接转成rune，就是一个字符一个字符
+	// rune是Decode之后的结果
+	for i, ch := range []rune(s) {
+		fmt.Printf("(%d %c) ", i, ch)
+	}
 }
