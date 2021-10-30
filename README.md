@@ -5,7 +5,7 @@ Learning the Go programming language
 
 ## 目录
 
-[1. Go语言基础入门和编程思维](https://github.com/Genesisnbq/Learn_go/tree/main/01_Go_basic_and_Programming_thinking)
+[1. 基础知识](https://github.com/Genesisnbq/Learn_go/tree/main/BasicKnowledge)
 
 [2. 租辆酷车小程序与TypeScript](https://#)
 
