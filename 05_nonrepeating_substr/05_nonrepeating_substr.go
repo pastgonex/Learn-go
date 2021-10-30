@@ -35,7 +35,8 @@ func main() {
 			m[str[j]]--
 			j++
 		}
-		ans = max(ans, i - j + 1)
+		ans = max(ans, i-j+1)
 	}
 	fmt.Println(ans)
 }
+
