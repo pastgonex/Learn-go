@@ -22,11 +22,6 @@ func main() {
 
 	fmt.Println("Rune count:", utf8.RuneCountInString(s))
 
-
-
-
-	
-
 	// 将s转换为Slice
 	bytes := []byte(s)
 	for len(bytes) > 0 {
@@ -40,4 +35,5 @@ func main() {
 	for i, ch := range []rune(s) {
 		fmt.Printf("(%d %c) ", i, ch)
 	}
+
 }
