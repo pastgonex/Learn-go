@@ -10,7 +10,7 @@ type Node struct {
 }
 
 // 虽然没有构造方法， 但是Go中可以写 工厂函数
-func createNode(value int) *Node {
+func CreateNode(value int) *Node {
 	// 在c++中， 返回一个局部变量的地址会出问题
 	// 但是在go语言中，可以返回一个局部变量的地址给别人使用
 	return &Node{Value: value}
