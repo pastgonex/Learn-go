@@ -78,7 +78,7 @@ func consts() {
 // 枚举
 func enums() {
 	const (
-		// cpp = 0	
+		// cpp = 0
 		// java = 1
 		// python = 2
 		// golang = 3
@@ -100,6 +100,11 @@ func enums() {
 	fmt.Println(b, kb, mb, gb, tb, pb)
 }
 
+func MyPow(a *int)  {
+	*a = *a * *a 
+}
+
+
 func main() {
 	fmt.Println("Hello world")
 	variableZeroValue()
@@ -111,4 +116,8 @@ func main() {
 	triangle()
 	consts()
 	enums()
+	fmt.Printf("%T\n", ss)
+	abc := 123
+	
+	fmt.Printf("%T\n", abc)
 }

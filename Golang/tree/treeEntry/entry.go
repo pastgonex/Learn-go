@@ -39,4 +39,5 @@ func main() {
 	newRoot := myTreeNode{&root}
 	fmt.Println("Post-order traversal: ")
 	newRoot.postOrder()
+	
 }
