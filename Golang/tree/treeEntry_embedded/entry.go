@@ -12,9 +12,9 @@ type myTreeNode struct {
 	// 可以直接点出 成员 和 方法
 }
 
-// 可以shadowed method （相当于继承中的重载）
+// Traverse 可以shadowed method （相当于继承中的重载）
 // 但是Go中，不能将子类指针赋值给基类指针（java这样做可以拿到子类重载的方法）
-func  (myNode *myTreeNode) Traverse() {
+func (myNode *myTreeNode) Traverse() {
 	fmt.Println("This is a shadowed method!")
 }
 
@@ -38,7 +38,7 @@ func main() {
 	/* root := tree.Node{Value: 3} */
 	root := myTreeNode{&tree.Node{Value: 3}}
 	root.Right = new(tree.Node)
-	root.Right = tree.CreateNode(999)
+	root.Right = tree.CreateNode(5)
 	fmt.Println("In-order traversal: ")
 	root.Traverse()
 
@@ -46,4 +46,11 @@ func main() {
 
 	fmt.Println("Post-order traversal: ")
 	root.postOrder()
+
+	nodeCount := 0
+	root.TraverseFunc(func(node *tree.Node) {
+		nodeCount++
+	})
+	fmt.Println()
+	fmt.Println("Node count:", nodeCount)
 }

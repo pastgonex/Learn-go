@@ -3,8 +3,10 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io"
 	"os"
 	"strconv"
+	"strings"
 )
 
 func convertToBin(n int) string {
@@ -33,17 +35,18 @@ func Reverse(s string) string {
 }
 
 func printFile(filename string) {
-	// file, err := os.Open(filename)
-	// if err != nil {
-	// 	panic(err)
-	// }
-	if file, err := os.Open(filename); err != nil {
+	file, err := os.Open(filename)
+	if err != nil {
 		panic(err)
-	} else {
-		scanner := bufio.NewScanner(file)
-		for scanner.Scan() {
-			fmt.Println(scanner.Text())
-		}
+	}
+	fmt.Printf("%T %v", file, file)
+	printFileContents(file)
+}
+
+func printFileContents(reader io.Reader) {
+	scanner := bufio.NewScanner(reader)
+	for scanner.Scan() {
+		fmt.Println(scanner.Text())
 	}
 }
 
@@ -61,6 +64,12 @@ func main() {
 		convertToBin(72387885),
 		convertToBin(1),
 	)
-	printFile("abc.txt")
+	printFile("Golang/basic/loop/abc.txt")
+	s := `abc"d"
+	kkkk
+	123
+	
+	p`
+	printFileContents(strings.NewReader(s))
 	// forever()
 }

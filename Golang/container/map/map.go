@@ -34,7 +34,7 @@ func main() {
 	} else {
 		fmt.Println("key does not exist...")
 	}
-	
+
 	// 删除元素
 	fmt.Println("Deleting values...")
 	name, ok := m["name"]

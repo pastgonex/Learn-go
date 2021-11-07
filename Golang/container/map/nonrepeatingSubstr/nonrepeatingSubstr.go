@@ -12,11 +12,24 @@ func max(a, b int) int {
 	return b
 }
 
+func lengthOfNonRepeatingSubstr(s string) int {
+	ans, j := 0, 0
+	str := []rune(s)
+	m := map[rune]int{}
+	for i, v := range str {
+		m[v]++
+		for m[v] > 1 {
+			m[str[j]]--
+			j++
+		}
+		ans = max(ans, i-j+1)
+	}
+	return ans
+}
+
 func main() {
 	// 寻找最长不包含重复字符的子串
 	var s string
-	m := map[rune]int{}
-	ans := 0
 	fmt.Scan(&s)
 	// str := []rune(s) // 转成rune即可支持中文
 	// for i, j := 0, 0; i < len(str); i++ {
@@ -27,16 +40,5 @@ func main() {
 	// 	}
 	// 	ans = max(ans, i-j+1)
 	// }
-	j := 0
-	str := []rune(s) // 转成rune即可支持中文
-	for i, v := range str {
-		m[v]++
-		for m[v] > 1 {
-			m[str[j]]--
-			j++
-		}
-		ans = max(ans, i-j+1)
-	}
-	fmt.Println(ans)
+	fmt.Println(lengthOfNonRepeatingSubstr(s))
 }
-

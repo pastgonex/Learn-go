@@ -62,8 +62,14 @@ func euler() {
 // go没有隐式类型转换
 func triangle() {
 	var a, b int = 3, 4
-	var c int = int(math.Sqrt(float64(a*a + b*b)))
+	var c int = calcTriangle(a, b)
 	fmt.Println(c)
+}
+
+func calcTriangle(a, b int) int {
+	var c int
+	c = int(math.Sqrt(float64(a*a + b*b)))
+	return c
 }
 
 // 常量
@@ -100,10 +106,9 @@ func enums() {
 	fmt.Println(b, kb, mb, gb, tb, pb)
 }
 
-func MyPow(a *int)  {
-	*a = *a * *a 
+func MyPow(a *int) {
+	*a = *a * *a
 }
-
 
 func main() {
 	fmt.Println("Hello world")
@@ -118,6 +123,6 @@ func main() {
 	enums()
 	fmt.Printf("%T\n", ss)
 	abc := 123
-	
+
 	fmt.Printf("%T\n", abc)
 }

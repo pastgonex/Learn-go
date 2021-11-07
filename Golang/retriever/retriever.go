@@ -19,22 +19,31 @@ func download(r Retriever) string {
 }
 
 func main() {
-	var r Retriever = mock.Retriever{Contents: "This is a fake url"}
+	var r Retriever = &mock.Retriever{Contents: "This is a fake url"}
 	inspect(r)
 	//fmt.Println(download(r))
 	r = &real.Retriever{
 		UserAgent: "Mozilla/5.0",
 		TimeOut:   time.Minute,
 	}
-
 	inspect(r)
+
+	// Type assertion
+	realRetriever := r.(*real.Retriever)
+
+	if mockRetriever, ok := r.(*mock.Retriever); ok {
+		fmt.Println(mockRetriever.Contents)
+	} else {
+		fmt.Println("not a mock Retriever!")
+	}
+	fmt.Println(realRetriever.TimeOut)
 	//fmt.Println(download(r))
 }
 
 func inspect(r Retriever) {
 	fmt.Printf("%T %v\n", r, r)
 	switch v := r.(type) {
-	case mock.Retriever:
+	case *mock.Retriever:
 		fmt.Println("Contents: ", v.Contents)
 	case *real.Retriever:
 		fmt.Println("UserAgent:", v.UserAgent)
