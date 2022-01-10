@@ -15,7 +15,7 @@ func main() {
 		// 可以使用channel来解决，暂时先不处理
 		go func(i int) { // 主程序还在往下面跑， 只是并发地开了一个函数
 			for {
-				fmt.Printf("Hello from "+"goroutine %d\n", i)
+				fmt.Printf("Hello from "+"goroutine-channel %d\n", i)
 				//a[i]++
 				//runtime.Gosched()
 			}

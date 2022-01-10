@@ -35,7 +35,7 @@ func eval(a, b int, op string) (int, error) {
 func apply(op func(int, int) int, a, b int) int {
 	p := reflect.ValueOf(op).Pointer()
 	opName := runtime.FuncForPC(p).Name()
-	fmt.Printf("Calling function %s with args "+"(%d %d) ", opName, a, b)
+	fmt.Printf("Calling func %s with args "+"(%d %d) ", opName, a, b)
 	return op(a, b)
 }
 
@@ -63,7 +63,7 @@ func div(a, b int) (int, int) {
 // }
 
 // 可变参数列表
-func sum(numbers ... int) int {
+func sum(numbers ...int) int {
 	s := 0
 	for i := range numbers {
 		s += numbers[i]
@@ -90,4 +90,4 @@ func main() {
 		}, 3, 4))
 
 	fmt.Println(sum(1, 2, 3, 4, 5))
-} 
+}

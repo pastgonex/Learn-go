@@ -54,7 +54,7 @@ func chanDemo() {
 	// wait for all of them
 	//for _, worker := range workers {
 	//	// 因为上面发完了之后又要再发， 那么得先有人收
-	//	// 或者在收的时候， 再开一个 goroutine， 那么就可以继续收了
+	//	// 或者在收的时候， 再开一个 goroutine-channel， 那么就可以继续收了
 	//	<-worker.done
 	//	<-worker.done
 	//}

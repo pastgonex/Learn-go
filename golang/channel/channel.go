@@ -14,7 +14,7 @@ func createWorker(id int) chan<- int {
 			fmt.Printf("Worker %d received %c\n", id, <-c)
 		}
 	}()
-	// 上面要开一个 goroutine， 不然就死循环在这里了，不可能可以return出去的
+	// 上面要开一个 goroutine-channel， 不然就死循环在这里了，不可能可以return出去的
 	return c
 }
 
