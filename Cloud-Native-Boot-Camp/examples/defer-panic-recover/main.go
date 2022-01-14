@@ -3,11 +3,12 @@ package main
 import "fmt"
 
 func main() {
+	// panic这种级别的错误, 是需要recover的
 	defer func() {
 		fmt.Println("defer func is called")
-		if r := recover(); r != nil {
-			fmt.Println("panic:", r)
+		if err := recover(); err != nil {
+			fmt.Println(err)
 		}
 	}()
-	panic("a panic is triggered")
+	panic("a panic is triggered!!")
 }

@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+// 如何停止一个子协程
+
 func main() {
 	done := make(chan bool)
 	go func() {
