@@ -1,11 +1,10 @@
 package main
 
 import (
-	"fmt"
-	"time"
-
 	"Learn_go/golang/retriever/mock"
 	"Learn_go/golang/retriever/real"
+	"fmt"
+	"time"
 )
 
 // Retriever 定义了一个接口，实现者需要有 Get方法
