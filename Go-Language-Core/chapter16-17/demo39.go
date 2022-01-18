@@ -9,6 +9,7 @@ func main() {
 	sign := make(chan struct{}, num) // buffered channel
 
 	for i := 0; i < num; i++ {
+		i := i
 		go func() {
 			fmt.Println(i)
 			// 这个struct{}{}占用的空间是0字节。
