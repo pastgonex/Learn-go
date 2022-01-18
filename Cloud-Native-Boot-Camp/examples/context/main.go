@@ -49,5 +49,10 @@ func main() {
 		}
 
 	}(timeoutCtx)
-
+	select {
+	case <-timeoutCtx.Done():
+		time.Sleep(1 * time.Second)
+		fmt.Println("main process exit!")
+	}
+	// time.Sleep(5 * time.Second)
 }

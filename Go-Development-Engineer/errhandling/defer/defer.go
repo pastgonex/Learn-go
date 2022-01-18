@@ -1,7 +1,7 @@
 package main
 
 import (
-	"Learn_go/golang/errhandling/fib"
+	"Learn_go/Go-Development-Engineer/errhandling/fib"
 	"bufio"
 	"errors"
 	"fmt"
@@ -56,5 +56,5 @@ func writeFile(filename string) {
 
 func main() {
 	tryDefer()
-	writeFile("golang/errhandling/defer/fib.txt")
+	writeFile("Go-Development-Engineer/errhandling/defer/fib.txt")
 }

@@ -1,8 +1,8 @@
 package main
 
 import (
-	"Learn_go/golang/retriever/mock"
-	"Learn_go/golang/retriever/real"
+	"Learn_go/Go-Development-Engineer/retriever/mock"
+	"Learn_go/Go-Development-Engineer/retriever/real"
 	"fmt"
 	"time"
 )

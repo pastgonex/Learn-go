@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"Learn_go/golang/tree"
+	"Learn_go/Go-Development-Engineer/tree"
 )
 
 type myTreeNode struct {

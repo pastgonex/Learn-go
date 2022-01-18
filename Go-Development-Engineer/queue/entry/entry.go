@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"Learn_go/golang/queue"
+	"Learn_go/Go-Development-Engineer/queue"
 )
 
 func main() {

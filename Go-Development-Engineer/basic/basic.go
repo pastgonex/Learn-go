@@ -87,7 +87,7 @@ func enums() {
 		// cpp = 0
 		// java = 1
 		// python = 2
-		// golang = 3
+		// Go-Development-Engineer = 3
 		cpp = iota
 		_
 		java

@@ -7,7 +7,7 @@ func main() {
 	// 这是一个hash map， 内部无序， 所以每次输出的顺序都是不一样的
 	m := map[string]string{
 		"name":    "Sadudu",
-		"course":  "golang",
+		"course":  "Go-Development-Engineer",
 		"site":    "hangzhou",
 		"quality": "good",
 	}
