@@ -26,8 +26,8 @@ func (myNode *myTreeNode) postOrder() {
 	// 但是这样包装的不能自动传入地址， 所以需要一个变量来接收一下
 	// myTreeNode{myNode.node.Left}.postOrder()
 	// myTreeNode{myNode.node.Right}.postOrder()
-	left := myTreeNode{myNode.Node.Left}
-	right := myTreeNode{myNode.Node.Right}
+	left := myTreeNode{myNode.Left}
+	right := myTreeNode{myNode.Right}
 	left.postOrder()
 	right.postOrder()
 	// myNode.Node.Print()

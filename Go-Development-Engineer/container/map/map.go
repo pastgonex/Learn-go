@@ -2,6 +2,15 @@ package main
 
 import "fmt"
 
+/*
+	map:
+		init: make or {}
+		op: delete() -> 删除元素
+		for range order: disorderly
+
+		recommend: if v, ok := m[key]; ok {...}
+*/
+
 func main() {
 	// map[K]V, map[K1]map[K2]V
 	// 这是一个hash map， 内部无序， 所以每次输出的顺序都是不一样的
@@ -42,5 +51,5 @@ func main() {
 
 	delete(m, "name")
 	name, ok = m["name"]
-	fmt.Println(name, ok)
+	fmt.Println(ok)
 }

@@ -15,6 +15,7 @@ func main() {
 		// 可以使用channel来解决，暂时先不处理
 		go func(i int) { // 主程序还在往下面跑， 只是并发地开了一个函数
 			for {
+				// 因为是io操作，所以会有一个等待的过程， 如果是操作一个数组的话，可能不会主动交出控制权
 				fmt.Printf("Hello from "+"goroutine-channel %d\n", i)
 				//a[i]++
 				//runtime.Gosched()

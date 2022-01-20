@@ -68,7 +68,6 @@ func main() {
 	s := `abc"d"
 	kkkk
 	123
-	
 	p`
 	printFileContents(strings.NewReader(s))
 	// forever()
