@@ -11,3 +11,19 @@ func removeDuplicates(nums []int) int {
 	}
 	return n
 }
+
+func removeDuplicatesEverNi(nums []int) int {
+	cnt, n := 1, len(nums)
+	for i, j := 0, 1; i < n; {
+		j = i + 1
+		for j < n && nums[i] == nums[j] {
+			j++
+		}
+		if j >= n {
+			break
+		}
+		nums[cnt] = nums[j]
+		i, cnt = j, cnt+1
+	}
+	return cnt
+}
