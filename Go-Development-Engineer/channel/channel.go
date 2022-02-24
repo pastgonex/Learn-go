@@ -5,7 +5,7 @@ import (
 	"time"
 )
 
-// 只能收数据的channel
+// 只能收数据的channel, 创建一个channel， 顺带创建一个goroutine
 func createWorker(id int) chan<- int {
 	// 打印乱序是因为，Printf进行了io操作， goroutine会进行调度
 	c := make(chan int)
@@ -91,6 +91,8 @@ func channelClose() {
 func main() {
 	fmt.Println("Channel as first-class citizen")
 	chanDemo()
+	fmt.Println("明明小写字母先发的，但为啥有时候大写字母在前面呢？")
+	fmt.Printf("那是因为io操作有一个等待的过程，不会主动交出控制权！！！\n\n")
 
 	fmt.Println("Buffered channel")
 	bufferedChannel()
