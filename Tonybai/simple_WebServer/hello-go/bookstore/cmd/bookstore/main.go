@@ -1,9 +1,9 @@
 package main
 
 import (
-	_ "Learn_go/Tonybai/basic/hello-go/bookstore/internal/store"
-	"Learn_go/Tonybai/basic/hello-go/bookstore/server"
-	"Learn_go/Tonybai/basic/hello-go/bookstore/store/factory"
+	_ "Learn_go/Tonybai/simple_WebServer/hello-go/bookstore/internal/store"
+	"Learn_go/Tonybai/simple_WebServer/hello-go/bookstore/server"
+	"Learn_go/Tonybai/simple_WebServer/hello-go/bookstore/store/factory"
 	"context"
 	"log"
 	"os"

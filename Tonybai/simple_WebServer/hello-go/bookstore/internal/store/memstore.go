@@ -1,8 +1,8 @@
 package store
 
 import (
-	mystore "Learn_go/Tonybai/basic/hello-go/bookstore/store"
-	"Learn_go/Tonybai/basic/hello-go/bookstore/store/factory"
+	mystore "Learn_go/Tonybai/simple_WebServer/hello-go/bookstore/store"
+	"Learn_go/Tonybai/simple_WebServer/hello-go/bookstore/store/factory"
 	"sync"
 )
 

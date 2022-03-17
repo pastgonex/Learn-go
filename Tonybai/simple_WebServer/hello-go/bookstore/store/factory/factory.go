@@ -1,7 +1,7 @@
 package factory
 
 import (
-	"Learn_go/Tonybai/basic/hello-go/bookstore/store"
+	"Learn_go/Tonybai/simple_WebServer/hello-go/bookstore/store"
 	"fmt"
 	"sync"
 )

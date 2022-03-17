@@ -1,8 +1,8 @@
 package server
 
 import (
-	"Learn_go/Tonybai/basic/hello-go/bookstore/server/middleware"
-	"Learn_go/Tonybai/basic/hello-go/bookstore/store"
+	"Learn_go/Tonybai/simple_WebServer/hello-go/bookstore/server/middleware"
+	"Learn_go/Tonybai/simple_WebServer/hello-go/bookstore/store"
 	"context"
 	"encoding/json"
 	"net/http"
