@@ -53,6 +53,7 @@ func dumpMethodSet(i interface{}) {
 	n := dynType.NumMethod()
 	if n == 0 {
 		fmt.Printf("%s's method set is empty!\n", dynType)
+		return
 	}
 
 	fmt.Printf("%s's method set:\n", dynType)
@@ -71,11 +72,26 @@ type T struct {
 	I
 }
 
+type TT struct {
+	II
+}
+
+type II I
+type III = I
+
 func (T) M3() {}
 
 func main() {
-	var t T
-	var p *T
-	dumpMethodSet(t)
-	dumpMethodSet(p)
+	//var t T
+	//var p *T
+	//dumpMethodSet(t)
+	//dumpMethodSet(p)
+
+	//var i II
+	//dumpMethodSet(i)
+	//dumpMethodSet(&i)
+
+	var tt TT
+	dumpMethodSet(tt)
+	dumpMethodSet(&tt)
 }
